@@ -3,7 +3,7 @@ FROM node:20 AS build
 WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 RUN pnpm install
-COPY . .
+COPY electrical-monitoring-dashboard .
 RUN pnpm build --prod
 
 # Stage 2: Serve the application with NGINX
