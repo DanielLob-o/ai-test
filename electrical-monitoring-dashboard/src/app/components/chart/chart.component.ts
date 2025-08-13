@@ -22,7 +22,7 @@ export class ChartComponent implements OnChanges {
   }
 
   initChart(): void {
-    const seriesData = this.series.map(s => ({
+    const seriesData: EChartsOption['series'] = this.series.map(s => ({
       name: s,
       type: 'line',
       data: this.data.map(d => [d.timestamp, d[s as keyof ElectricalData]])
