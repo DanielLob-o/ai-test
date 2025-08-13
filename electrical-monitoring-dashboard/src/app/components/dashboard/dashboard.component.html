@@ -1,0 +1,39 @@
+<div class="p-grid">
+  <div class="p-col-12">
+    <h1>Electrical Monitoring Dashboard</h1>
+  </div>
+
+  <div class="p-col-12">
+    <div class="p-grid">
+      <div class="p-col-12 p-md-6 p-lg-3">
+        <app-stats-card [title]="'Latest Consumption'" [value]="latestData?.consumption" [unit]="'kWh'"></app-stats-card>
+      </div>
+      <div class="p-col-12 p-md-6 p-lg-3">
+        <app-stats-card [title]="'Active Power'" [value]="latestData?.active_power" [unit]="'kW'"></app-stats-card>
+      </div>
+      <div class="p-col-12 p-md-6 p-lg-3">
+        <app-stats-card [title]="'Reactive Power'" [value]="latestData?.reactive_power" [unit]="'kVAR'"></app-stats-card>
+      </div>
+      <div class="p-col-12 p-md-6 p-lg-3">
+        <app-stats-card [title]="'Apparent Power'" [value]="latestData?.apparent_power" [unit]="'kVA'"></app-stats-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-col-12">
+    <app-chart [data]="electricalData" [title]="'Voltage'" [series]="['v_l1_l2', 'v_l2_l3', 'v_l1_l3']" [yAxisLabel]="'Voltage (V)'"></app-chart>
+  </div>
+
+  <div class="p-col-12">
+    <app-chart [data]="electricalData" [title]="'Current'" [series]="['i_l1', 'i_l2', 'i_l3']" [yAxisLabel]="'Current (A)'"></app-chart>
+  </div>
+
+  <div class="p-col-12">
+    <app-chart [data]="electricalData" [title]="'Power'" [series]="['active_power', 'reactive_power', 'apparent_power']" [yAxisLabel]="'Power'"></app-chart>
+  </div>
+
+  <div class="p-col-12">
+    <app-chart [data]="electricalData" [title]="'Consumption'" [series]="['consumption']" [yAxisLabel]="'Energy (kWh)'"></app-chart>
+  </div>
+
+</div>
