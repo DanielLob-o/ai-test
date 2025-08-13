@@ -1,10 +1,14 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { EChartsOption } from 'echarts';
 import { ElectricalData } from '../../models/electrical-data.model';
+import {NgxEchartsDirective} from 'ngx-echarts';
 
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
+  imports: [
+    NgxEchartsDirective
+  ],
   styleUrls: ['./chart.component.css']
 })
 export class ChartComponent implements OnChanges {
