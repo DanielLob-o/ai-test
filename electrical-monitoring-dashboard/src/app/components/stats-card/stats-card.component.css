@@ -1,0 +1,16 @@
+:host {
+  display: block;
+}
+
+.stats-value {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+::ng-deep .p-card-header {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
