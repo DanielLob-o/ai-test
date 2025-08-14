@@ -12,7 +12,7 @@ export class ElectricalDataService {
   getElectricalData(): Observable<ElectricalData[]> {
     const data: ElectricalData[] = [];
     const now = new Date();
-    for (let i = 24 * 60; i >= 0; i--) { // Data for every minute in the last 24 hours
+    for (let i = 24 ; i >= 0; i--) { // Data for every minute in the last 24 hours
       const timestamp = new Date(now.getTime() - i * 60 * 1000);
       data.push({
         timestamp,
