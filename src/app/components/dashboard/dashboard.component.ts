@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ElectricalDataService } from '../../services/electrical-data.service';
 import { ElectricalData } from '../../models/electrical-data.model';
 import {ChartComponent} from '../chart/chart.component';
 import {StatsCardComponent} from '../stats-card/stats-card.component';
 
 @Component({
+  standalone: true,
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   imports: [
