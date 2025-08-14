@@ -8,9 +8,6 @@ import { ChartComponent } from './chart/chart.component';
 
 @NgModule({
   declarations: [
-    DashboardComponent,
-    StatsCardComponent,
-    ChartComponent
   ],
   imports: [
     CommonModule,
@@ -20,9 +17,6 @@ import { ChartComponent } from './chart/chart.component';
     })
   ],
   exports: [
-    DashboardComponent,
-    StatsCardComponent,
-    ChartComponent
   ]
 })
 export class ComponentsModule { }

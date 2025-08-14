@@ -7,11 +7,9 @@ import { ComponentsModule } from './components/components.module';
 import { ElectricalDataService } from './services/electrical-data.service';
 import { RouterModule } from '@angular/router';
 import { providePrimeNG } from 'primeng/config';
-import Aura from '@primeuix/themes/aura';
 
 @NgModule({
   declarations: [
-    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -22,12 +20,8 @@ import Aura from '@primeuix/themes/aura';
   ],
   providers: [
     ElectricalDataService,
-    providePrimeNG({
-      theme: {
-          preset: Aura
-      }
-  })
+
   ],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
 export class AppModule { }

@@ -7,6 +7,10 @@ import {StatsCardComponent} from '../stats-card/stats-card.component';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
+  imports: [
+    ChartComponent,
+    StatsCardComponent
+  ],
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
