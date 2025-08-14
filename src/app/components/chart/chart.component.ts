@@ -6,9 +6,6 @@ import {NgxEchartsDirective} from 'ngx-echarts';
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
-  imports: [
-    NgxEchartsDirective
-  ],
   styleUrls: ['./chart.component.css']
 })
 export class ChartComponent implements OnChanges {
